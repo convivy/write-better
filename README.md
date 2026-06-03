@@ -2,7 +2,7 @@
 
 Write Better is a small, drop-in style guide that makes Claude write plainly and specifically, and stops the padded, hedged, restated prose AI tends to produce. It's for anyone who writes with Claude, and it's free to use, change, and pass on.
 
-Write Better comes in three pieces:
+There are three pieces:
 
 - **`essentials.md`** — a short block (~400 words) of always-on rules. Paste it into wherever your Claude reads standing instructions.
 - **`style-guide.md`** — the full rule catalog. Keep it as a reference document Claude can consult when you're writing or editing something that matters.

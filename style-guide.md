@@ -8,7 +8,7 @@ Use this as a standing reference: point Claude at it when you're writing or edit
 
 ## The core principle
 
-**Say it once, precisely.** Describe what you're describing, the first time, precisely — then stop. Every clause has to earn its place by adding new information: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates something already said, or argues against a point no one would make, cut it.
+**Say it once, precisely.** Describe what you're describing, the first time, precisely, then stop. Every clause has to earn its place by adding new information: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates something already said, or argues against a point no one would make, cut it.
 
 Expect prose written this way to come out noticeably shorter. That's the point.
 
@@ -33,7 +33,7 @@ Rules are grouped by category. Each one states the rule, why it matters, a ✂�
 - ✅ "Never deploy on a Friday."
 
 #### A2 — No broad-to-narrow ramp
-**Rule:** Lead with the precise version and stop. Don't state an idea broadly, then narrower, then narrowest — three passes at one point, each rewording the last.
+**Rule:** Lead with the precise version and stop. Don't state an idea broadly, then narrower, then narrowest, three passes at one point, each rewording the last.
 **Why:** The restatements are redundancy. A reader anchors on the precise phrasing, and the earlier passes only delay it.
 
 - ✂️ "We support teams — engineering teams, specifically — backend engineers, to be exact."
@@ -68,6 +68,13 @@ It also shows up as padded appositive lists that zoom on one idea: "their data, 
 - ✂️ "The queue is drained each night."
 - ✅ "The scheduler drains the queue each night."
 
+#### B5 — Complete the clause, even for a bare statement
+**Rule:** State things in a complete clause, not a sentence fragment, even when you're only noting that something exists or introducing a list. Give it a subject and a verb; "There are X" beats a bare "X:".
+**Why:** A fragment makes the reader supply the verb. A full clause reads as a person talking, not a label slapped on a list.
+
+- ✂️ "Three pieces:"
+- ✅ "There are three pieces:" (or, with a named subject, "The bundle has three pieces.")
+
 ### C. Clarity & precision
 
 #### C1 — Make the dependency explicit, not "load-bearing"
@@ -79,10 +86,10 @@ It also shows up as padded appositive lists that zoom on one idea: "their data, 
 
 ### D. Tone & voice
 
-These three travel together: they're how to write about plans and next steps like a person, not like AI. The tell is prose that narrates a future plan in clipped, present-tense, over-energized fragments.
+These three travel together. They're how to write about plans and next steps like a person, not like AI. The tell is prose that narrates a future plan in clipped, present-tense, over-energized fragments.
 
 #### D1 — Propose actions; don't just narrate them
-**Rule:** When you want people to do something, propose it — "Let's…", "I propose we…", or a direct "please…". Don't hand someone a bare label ("Next steps:") over a list of flat declaratives.
+**Rule:** When you want people to do something, propose it. Use "Let's…", "I propose we…", or a direct "please…". Don't hand someone a bare label ("Next steps:") over a list of flat declaratives.
 **Why:** A declarative states a fact, but a plan isn't a fact until people agree to it. Proposing it asks for the agreement the plan needs, and it reads as a person talking to people.
 
 - ✂️ "Next steps: Sam and Alex build the proposal."
@@ -99,7 +106,7 @@ These three travel together: they're how to write about plans and next steps lik
 
 #### D3 — Don't over-color a plain action with a showy verb
 **Rule:** Describe a simple action with a literal verb. Don't reach for a vivid metaphor ("stays parked", "is locked", "circle back", "drill into") when the plain word says it.
-**Why:** The metaphor adds energy the action doesn't have, and it usually doesn't fit — pricing isn't a car. It reads as trying too hard.
+**Why:** The metaphor adds energy the action doesn't have, and it usually doesn't fit, since pricing isn't a car. It reads as trying too hard.
 
 - ✂️ "Pricing stays parked until scope is locked."
 - ✅ "We'll defer pricing until we agree on the scope."
@@ -142,7 +149,7 @@ In Claude Code, type **`/write-better`** (optionally with a file or path) to run
 
 1. **Fix violations** of the rules above.
 2. **Keep guardrail negations** — `do NOT X` / "read from the replica, not the primary" / "never deploy on a Friday," where the alternative is a real, likely-wrong choice or an operational rule. These carry information; stripping them removes a fence around a known failure. This matters most in technical instructions, runbooks, and code comments.
-3. **Change nothing else.** Leave the substance, facts, numbers, steps, structure, headings, and code untouched. It's a style pass, not a rewrite — don't reorganize, don't add, don't "improve" wording beyond conforming to the guide.
+3. **Change nothing else.** Leave the substance, facts, numbers, steps, structure, headings, and code untouched. It's a style pass, not a rewrite. Don't reorganize, don't add, don't "improve" wording beyond conforming to the guide.
 4. **Report what changed** — a short list of the edits, so the pass is reviewable.
 
 Expect a styled document to come out noticeably shorter.
@@ -151,7 +158,7 @@ Expect a styled document to come out noticeably shorter.
 
 ## Adding a rule
 
-Copy this template, fill it in, and slot it under the right category (give it the next number in that category, e.g. B5). Keep examples real and short.
+Copy this template, fill it in, and slot it under the right category (give it the next number in that category, e.g. B6). Keep examples real and short.
 
 ```
 #### <ID> — <short name>
