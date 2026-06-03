@@ -1,5 +1,7 @@
 # Write Better — say it once, precisely
 
+These rules are always on: apply them by default to everything you write for a human reader, the first time, without being asked.
+
 Write all prose (documents, READMEs, emails, posts, commit messages, code comments) plainly and specifically. Describe what you're describing the first time, precisely, then stop. Every clause has to add something: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates an earlier one or argues against a point no one would make, cut it.
 
 Avoid these habits, all common in AI-drafted prose:
@@ -14,6 +16,8 @@ Avoid these habits, all common in AI-drafted prose:
 
 5. **Over-colored verbs for plain actions.** Describe a simple action with a literal verb; don't reach for a showy metaphor (`pricing stays parked until scope is locked`; `circle back`; `drill into`) when the plain word says it. Write `we'll defer pricing until we agree on scope`.
 
-The test for each clause: does it add a new fact, constraint, specific, or real disambiguation? Keep it. Is it a restatement at a different zoom, or a strawman? Cut it. Expect clean prose to come out noticeably shorter; that's the point.
+6. **The bare-fragment statement.** Stating something in a sentence fragment instead of a complete clause, especially when noting that something exists or introducing a list (`The test for each clause: does it…`). Give it a subject and a verb (`The test for each clause is: does it…`). A fragment makes the reader supply the verb; a full clause reads as a person talking, not a label slapped on a list. This may be the most pervasive tell of all.
 
-**`/write-better`** (in Claude Code), or **"run write-better on this"** (elsewhere), means: apply these rules to the document, keep guardrail negations, change nothing else (substance, facts, structure, code stay untouched), and report what changed.
+The test for each clause is: does it add a new fact, constraint, specific, or real disambiguation? Keep it. Is it a restatement at a different zoom, or a strawman? Cut it. Expect clean prose to come out noticeably shorter; that's the point.
+
+**`/write-better`** (in Claude Code), or **"run write-better on this"** (elsewhere), is a cleanup pass for text that *wasn't* written this way (a draft, pasted text, an older document). It applies these rules, keeps guardrail negations, changes nothing else (substance, facts, structure, code stay untouched), and reports what changed.

@@ -4,7 +4,7 @@ Write Better is a small, drop-in style guide that makes Claude write plainly and
 
 There are three pieces:
 
-- **`essentials.md`** — a short block (~400 words) of always-on rules. Paste it into wherever your Claude reads standing instructions.
+- **`essentials.md`** — a short block (~400 words) of always-on rules. Paste it into wherever your Claude reads standing instructions; once it's in, Claude writes in this style by default, with no command to invoke.
 - **`style-guide.md`** — the full rule catalog. Keep it as a reference document Claude can consult when you're writing or editing something that matters.
 - **`write-better.md`** — a `/write-better` slash command for Claude Code that runs the pass on a document on demand.
 
@@ -35,10 +35,11 @@ The essentials work on their own. The full guide and the command are there for t
 
 ## Using it
 
-Once the essentials are in place, Claude follows them by default. Two things to know:
+Once the essentials are in place, Write Better is **on by default**. Claude applies it to everything it writes for a human reader (documents, READMEs, commit messages, chat replies) automatically, the first time, without you invoking anything. There's no command to turn it on.
 
-- **`/write-better`** in Claude Code, or **"run write-better on this"** in Claude.ai / Cowork, runs a focused edit on a document. It fixes the style, keeps the guardrail negations, changes nothing else, and reports what it changed. Expect the result to come out shorter.
-- **Make it yours.** The catalog is a starting point. Add your own rules with the template at the bottom of `style-guide.md`.
+`/write-better` is for the other case: cleaning up text that *wasn't* written under the standard. Run it in Claude Code (or say "run write-better on this" in Claude.ai / Cowork) on a hand-written draft, pasted text, or an older document. It fixes the style, keeps the guardrail negations, changes nothing else, and reports what it changed. Expect the result to come out shorter.
+
+**Make it yours.** The catalog is a starting point. Add your own rules with the template at the bottom of `style-guide.md`.
 
 ---
 
