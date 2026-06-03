@@ -1,8 +1,8 @@
 # Write Better
 
-A small, drop-in style guide that makes Claude write plainly and specifically, and stops the padded, hedged, restated prose AI tends to produce. Built for anyone who writes with Claude; free to use, change, and pass on.
+Write Better is a small, drop-in style guide that makes Claude write plainly and specifically, and stops the padded, hedged, restated prose AI tends to produce. It's for anyone who writes with Claude, and it's free to use, change, and pass on.
 
-Three pieces:
+Write Better comes in three pieces:
 
 - **`essentials.md`** — a short block (~400 words) of always-on rules. Paste it into wherever your Claude reads standing instructions.
 - **`style-guide.md`** — the full rule catalog. Keep it as a reference document Claude can consult when you're writing or editing something that matters.
@@ -24,7 +24,7 @@ The essentials work on their own. The full guide and the command are there for t
 
 - **Essentials** → Settings → Profile → the "personal preferences" / instructions field. It applies to every conversation. (Aim for a few short paragraphs; this field shares your conversation's budget.)
 - **Full guide** → on paid plans, create a Project and upload `style-guide.md` as a project file, so it's available in every chat in that project. On the free plan, paste it at the top of a conversation when you want a thorough edit.
-- Note: unlike Claude Code, the full guide does not load on its own here — add it to a Project or paste it in.
+- Note: unlike Claude Code, the full guide does not load on its own here, so add it to a Project or paste it in.
 
 ### Claude Cowork (in the Claude desktop app)
 
@@ -37,7 +37,7 @@ The essentials work on their own. The full guide and the command are there for t
 
 Once the essentials are in place, Claude follows them by default. Two things to know:
 
-- **`/write-better`** (Claude Code), or **"run write-better on this"** (Claude.ai / Cowork) — runs a focused edit on a document: fix the style, keep the guardrail negations, change nothing else, and report what it changed. Expect the result to come out shorter.
+- **`/write-better`** in Claude Code, or **"run write-better on this"** in Claude.ai / Cowork, runs a focused edit on a document. It fixes the style, keeps the guardrail negations, changes nothing else, and reports what it changed. Expect the result to come out shorter.
 - **Make it yours.** The catalog is a starting point. Add your own rules with the template at the bottom of `style-guide.md`.
 
 ---
