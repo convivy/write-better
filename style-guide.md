@@ -27,10 +27,13 @@ Rules are grouped by category. Each one states the rule, why it matters, a ✂�
 - ✂️ "We build what we know, not what a market study tells us to build."
 - ✅ "We build what we know."
 
-**Exception — keep informative negation.** When the alternative is a *real, likely-wrong* choice, the contrast is a guardrail and carries information. Keep it. This matters most in technical and operational instructions, where an explicit "do **not** X" fences off a known failure.
+**Exception — gate the contrast by audience.** Keep the "X, not Y" contrast only when the reader is an LLM, or when the negation is an outright safety prohibition. An LLM reader (agent prompts, runbooks, skills, tool descriptions) measurably benefits from having the failure mode named, so an operational "do X, not Y" that steers an action earns its place there. A human reader gets nothing from the foil, and it reads as an AI tell. So human-facing prose keeps no contrast. State the point positively and cut the foil, even when the negated alternative was a genuine option you weighed.
 
-- ✅ "Read from the replica, not the primary." (the primary is a tempting, wrong default)
-- ✅ "Never deploy on a Friday."
+Outright safety prohibitions sit outside the gate. "Do not delete the prod table" and "never force-push to main" are instructions, not the define-by-negation tell, so they stay for any audience; stripping them from a human runbook would remove a real safety fence.
+
+- ✅ (LLM-facing) "Read from the replica, not the primary." (names the wrong default for an agent following the instruction)
+- ✅ (any audience) "Never force-push to main." (a safety prohibition)
+- ✂️ (human-facing) "The infra week is a bake-off, not a commitment to a framework." → ✅ "The infra week is a time-boxed bake-off." (the foil steers no action, so cut it, even though dropping the framework was a real choice)
 
 #### A2 — No broad-to-narrow ramp
 **Rule:** Lead with the precise version and stop. Don't state an idea broadly, then narrower, then narrowest, three passes at one point, each rewording the last.
@@ -69,11 +72,15 @@ It also shows up as padded appositive lists that zoom on one idea: "their data, 
 - ✅ "The scheduler drains the queue each night."
 
 #### B5 — Complete the clause, even for a bare statement
-**Rule:** State things in a complete clause, not a sentence fragment, even when you're only noting that something exists or introducing a list. Give it a subject and a verb; "There are X" beats a bare "X:".
+**Rule:** State things in a complete clause, not a sentence fragment, even when you're only noting that something exists or introducing a list. Give it a subject and a verb; "There are X" beats a bare "X:". This applies to **bold paragraph and section leads** too: a bold lead that opens a paragraph is a sentence, so it takes a subject and a verb.
 **Why:** A fragment makes the reader supply the verb. A full clause reads as a person talking, not a label slapped on a list.
 
 - ✂️ "Three pieces:"
 - ✅ "There are three pieces:" (or, with a named subject, "The bundle has three pieces.")
+- ✂️ "**Model gateway as a first-class component.**" (a bold lead with no verb)
+- ✅ "**The model gateway is a first-class component.**"
+
+**Note:** A bold paragraph lead is distinct from the `**Bold label** — gloss` definition-list form that E1 allows. The definition-list form is a tight label on a list item; a paragraph lead is a sentence, so it takes a verb.
 
 ### C. Clarity & precision
 
@@ -148,7 +155,7 @@ A topic sentence followed by *new* detail is good writing. A topic sentence foll
 In Claude Code, type **`/write-better`** (optionally with a file or path) to run a focused edit that conforms a document to this guide and changes nothing else. On Claude.ai or Cowork, say **"run write-better on this"**. Either way, the pass is:
 
 1. **Fix violations** of the rules above.
-2. **Keep guardrail negations** — `do NOT X` / "read from the replica, not the primary" / "never deploy on a Friday," where the alternative is a real, likely-wrong choice or an operational rule. These carry information; stripping them removes a fence around a known failure. This matters most in technical instructions, runbooks, and code comments.
+2. **Keep guardrail negations for an LLM reader, and safety prohibitions for any reader.** In LLM-facing text (agent prompts, runbooks, skills, tool descriptions), keep an operational `do NOT X` / "read from the replica, not the primary" that steers an action, since naming the failure mode there improves reliability. Keep outright safety prohibitions (`never force-push to main`, "do not delete the prod table") for any audience. In human-facing prose, cut the foil and state the point positively, even when the negated alternative was a genuine option.
 3. **Change nothing else.** Leave the substance, facts, numbers, steps, structure, headings, and code untouched. It's a style pass, not a rewrite. Don't reorganize, don't add, don't "improve" wording beyond conforming to the guide.
 4. **Report what changed** — a short list of the edits, so the pass is reviewable.
 
@@ -170,6 +177,13 @@ Copy this template, fill it in, and slot it under the right category (give it th
 
 **Exception:** <when not to apply — omit if none>
 ```
+
+---
+
+## Changelog
+
+- **2026-06-08 — A1 exception gated by audience.** The old "keep the contrast" exception fired whenever the negated alternative was "a real, likely-wrong choice," which was broad enough to wave through rhetorical foils in human-facing prose (the catching case: "a bake-off, not a commitment to a framework"). The exception now keeps "X, not Y" only for an LLM reader, where naming the failure mode improves reliability, or for an outright safety prohibition, which holds for any audience. Human-facing prose gets no exception.
+- **2026-06-08 — B5 covers bold leads.** B5 now states that a bold paragraph or section lead is a sentence and takes a subject and a verb ("The model gateway is a first-class component", not the bare "Model gateway as a first-class component"), distinct from the `**Bold label** — gloss` definition-list form E1 allows.
 
 ---
 
