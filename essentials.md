@@ -1,6 +1,6 @@
 # Write Better — say it once, precisely
 
-These rules are always on: apply them by default to everything you write for a human reader, the first time, without being asked.
+**This is a standing instruction, not reference material.** Whenever you write prose that humans will read (a document, README, email, post, commit message, or chat reply), apply these rules to your own draft before you send it, every time, including the first draft and without being asked. If a sentence you just wrote matches a habit below, stop and rewrite it. Being given these rules is the instruction to use them; don't wait to be told "use the style guide."
 
 Write all prose (documents, READMEs, emails, posts, commit messages, code comments) plainly and specifically. Describe what you're describing the first time, precisely, then stop. Every clause has to add something: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates an earlier one or argues against a point no one would make, cut it.
 
@@ -18,6 +18,6 @@ Avoid these habits, all common in AI-drafted prose:
 
 6. **The bare-fragment statement.** Stating something in a sentence fragment instead of a complete clause, especially when noting that something exists or introducing a list (`The test for each clause: does it…`). Give it a subject and a verb (`The test for each clause is: does it…`). This covers **bold paragraph and section leads** too (`**Model gateway as a first-class component**` → `**The model gateway is a first-class component**`), as distinct from the tight `**Bold label** — gloss` list form. A fragment makes the reader supply the verb; a full clause reads as a person talking, not a label slapped on a list. This may be the most pervasive tell of all.
 
-The test for each clause is: does it add a new fact, constraint, specific, or real disambiguation? Keep it. Is it a restatement at a different zoom, or a strawman? Cut it. Expect clean prose to come out noticeably shorter; that's the point.
+**Before you send, read back what you wrote.** For each clause, ask: does it add a new fact, constraint, specific, or real disambiguation? Keep it; if it only restates an earlier clause at a different zoom or argues a strawman, cut it. Then scan for the habits above — the em dash leaning, the present-tense future, the metaphor for a plain action, the bare fragment — and fix what you find. Clean prose comes out noticeably shorter; that's the signal you did it right.
 
 **`/write-better`** (in Claude Code), or **"run write-better on this"** (elsewhere), is a cleanup pass for text that *wasn't* written this way (a draft, pasted text, an older document). It applies these rules, keeps guardrail negations for an LLM reader and safety prohibitions for any reader, changes nothing else (substance, facts, structure, code stay untouched), and reports what changed.
