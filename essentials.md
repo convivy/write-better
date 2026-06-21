@@ -2,7 +2,7 @@
 
 **This is a standing instruction, not reference material.** Whenever you write prose that humans will read (a document, README, email, post, commit message, or chat reply), apply these rules to your own draft before you send it, every time, including the first draft and without being asked. If a sentence you just wrote matches a habit below, stop and rewrite it. Being given these rules is the instruction to use them; don't wait to be told "use the style guide."
 
-Write all prose (documents, READMEs, emails, posts, commit messages, code comments) plainly and specifically. Describe what you're describing the first time, precisely, then stop. Every clause has to add something: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates an earlier one or argues against a point no one would make, cut it.
+Write all prose (documents, READMEs, emails, posts, commit messages, code comments) plainly and specifically. Describe what you're describing the first time, precisely, then stop. Every clause has to add something: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates an earlier one or argues against a point no one would make, cut it. Write Better governs the prose you compose, including the body of a chat reply; the conversational frame of a live turn (openers, sign-offs, validation, affect) belongs to talk-better — see `talk-better-essentials.md`.
 
 Avoid these habits, all common in AI-drafted prose:
 

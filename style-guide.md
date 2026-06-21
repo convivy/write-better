@@ -131,6 +131,15 @@ These three travel together. They're how to write about plans and next steps lik
 
 **Exception:** A colon that introduces a list, block, or code is fine, and the `**Bold label** — gloss` definition-list dash is fine structure. This rule targets em dashes and colons dropped mid-sentence in flowing prose.
 
+#### E2 — No empty adverbs
+**Rule:** Cut adverbs that intensify or hedge without adding meaning: "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly."
+**Why:** They promise emphasis or candor but deliver neither. "Really very important" is not more important than "important"; "basically just a simple fix" is not simpler than "a simple fix." Each one the reader encounters erodes trust in the surrounding prose.
+
+- ✂️ "This is really very important and basically just a simple fix."
+- ✅ "This matters; the fix is one line."
+
+**Cross-reference:** "Genuinely" and "honestly" also appear in talk-better's Performed Sincerity rule (T5) as a participant-level move, prefacing a judgment to signal credibility. The sentence-level deadweight form is this rule's domain; the conversational-frame move is T5's.
+
 ### F. Your own rules
 
 This catalog is a starting point. Add categories and rules that fit your own writing, using the [template](#adding-a-rule) below.
@@ -182,6 +191,7 @@ Copy this template, fill it in, and slot it under the right category (give it th
 
 ## Changelog
 
+- **2026-06-21 — E2 added (Empty adverbs).** New rule cutting "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly" when they intensify or hedge without adding meaning. Cross-references talk-better's T5 (Performed sincerity), which owns the conversational-frame use of the same words.
 - **2026-06-08 — A1 exception gated by audience.** The old "keep the contrast" exception fired whenever the negated alternative was "a real, likely-wrong choice," which was broad enough to wave through rhetorical foils in human-facing prose (the catching case: "a bake-off, not a commitment to a framework"). The exception now keeps "X, not Y" only for an LLM reader, where naming the failure mode improves reliability, or for an outright safety prohibition, which holds for any audience. Human-facing prose gets no exception.
 - **2026-06-08 — B5 covers bold leads.** B5 now states that a bold paragraph or section lead is a sentence and takes a subject and a verb ("The model gateway is a first-class component", not the bare "Model gateway as a first-class component"), distinct from the `**Bold label** — gloss` definition-list form E1 allows.
 
