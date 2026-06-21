@@ -34,9 +34,11 @@ There are three pieces:
 
 ### Claude.ai (the web app)
 
-- **Essentials** → Settings → Profile → the "personal preferences" / instructions field. It applies to every conversation. (Aim for a few short paragraphs; this field shares your conversation's budget.) Paste `talk-better-essentials.md` into the same field, after the Write Better block.
-- **Full guides** → on paid plans, create a Project and upload `style-guide.md` and `talk-better-guide.md` as project files, so they are available in every chat in that project. On the free plan, paste either into a conversation when you want a thorough edit.
-- Note: unlike Claude Code, the full guides do not load on their own here, so add them to a Project or paste them in.
+These instructions reflect the current Claude.ai UI; label names may shift between releases.
+
+- **Essentials (always-on)** → Settings → General → the "Instructions for Claude" box. Paste the Write Better essentials there, then paste `talk-better-essentials.md` below it. The field applies to every conversation and shares the conversation's context budget, so keep it to a few short paragraphs.
+- **On-demand passes** → install the skills: download the `skills/write-better` and `skills/talk-better` folders from this repo, zip each folder, and upload each under Settings → Skills (also reachable as Customize → Skills). Once installed, each skill auto-triggers from its description, or you can say "run write-better on this" / "run talk-better on this." There is no slash-command syntax on the web.
+- **Full guides (optional, paid plans)** → you can keep `style-guide.md` and `talk-better-guide.md` as project files in a Claude.ai Project for always-available reference; on the free plan, paste either guide into a conversation when you want a thorough edit.
 
 ### Claude Cowork (in the Claude desktop app)
 
