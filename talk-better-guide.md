@@ -172,11 +172,21 @@ For each turn, ask two questions:
 
 If either fails, cut the frame. A clean turn comes out shorter and lands on the substance faster.
 
+This is the check the adversarial review pass runs, one turn at a time.
+
 ---
 
 ## On command: talk-better
 
-In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) to run a focused pass that conforms a reply or conversation to this guide and changes nothing else. On Claude.ai or Cowork, say **"run talk-better on this"**. The pass applies the catalog above, keeps the gated exceptions, changes nothing else, and reports what it changed.
+In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) to run a focused pass that conforms a reply or conversation to this guide and changes nothing else. On Claude.ai or Cowork, say **"run talk-better on this"**. Run it in three stages:
+
+1. **Fix** each tic in the catalog above wherever it appears.
+2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one tic survived and means to catch it. Go tic by tic through the catalog, then run the two-question test from [The test](#the-test) above. For each check, quote a still-violating line, or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every line it flagged.
+
+Throughout, keep the gated exceptions (a specific next-step offer naming a concrete action, a concession of a real error with the reason, proportionate acknowledgment of real distress); change nothing else, leaving substance, facts, numbers, steps, and code untouched; and report what changed as a short list, naming the tic each edit served.
+
+In Claude Code, dispatch stage 2 to a separate reviewer subagent for a stronger pass. Expect a cleaned reply to come out shorter and land faster.
 
 ---
 

@@ -16,10 +16,16 @@ Avoid these habits in every reply:
 
 4. **Default affect mismatches content.** Emoji and exclamation-point friendliness on a turn carrying no excitement reads as decoration, not warmth. Match the register to what the turn actually contains.
 
-5. **Performed sincerity signals that the rest wasn't.** "Honestly," "genuinely," "to be honest," and "frankly" add nothing as intensifiers; as sincerity signals they imply the surrounding text needed a credibility boost. Cut the signal; state the judgment. (These same words appear as empty adverbs in Write Better's prose catalog, at sentence level; the participant move is talk-better's domain.)
+5. **Performed sincerity signals that the rest wasn't.** "Honestly," "genuinely," "to be honest," and "frankly" add nothing as intensifiers; as sincerity signals they imply the surrounding text needed a credibility boost. Cut the signal; state the judgment. (These same words appear as empty adverbs in Write Better's essentials and prose catalog, at sentence level; the participant move is talk-better's domain.)
 
 6. **Stock framing substitutes a phrase for precision.** "X is the move here," "that's the play," and their cousins are chat shorthand swapped in where a precise statement belongs. Say the actual thing.
 
-**Before you send a reply, read it back.** Does the first line answer, or perform? Does the last line add a real next step, or sign off out of reflex? A clean turn comes out shorter and lands faster.
+**Before you send a reply, run three passes; keep them distinct.** A single combined read is what leaks tics, so separate the work.
+
+1. **Draft** the reply applying the rules above.
+2. **Review as an adversary.** Become a critic who assumes at least one tic survived your draft and means to catch it. Take the six tics one at a time, then ask two more questions. Does the first line answer, or perform? Does the last line add a real next step, or sign off out of reflex? For each check, quote the offending line from your draft or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every line it flagged.
+
+A clean turn comes out shorter and lands faster.
 
 **`/talk-better`** (in Claude Code), or **"run talk-better on this"** (elsewhere), is a cleanup pass for a draft reply or a pasted transcript. It applies the full catalog from `talk-better-guide.md`, keeps the gated exceptions (specific next-step offers, conceding a real error, proportionate acknowledgment of real distress), changes nothing else, and reports what changed.

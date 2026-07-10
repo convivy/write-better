@@ -18,12 +18,17 @@ Enforce these core rules for each turn:
 - **No question read-back when nothing was ambiguous.** Cut turns that replay the question before answering it. Keep a one-line restatement that resolves a genuine fork.
 - **No over-structuring a small answer.** Remove headers and bullet scaffolding from answers that read cleanly as prose. Keep structure where the content is genuinely a list, sequence, or comparison.
 
-How to run the pass:
+Run the pass in three stages. Keep them distinct; a single combined read is what lets tics through.
 
-1. Fix each tic above wherever it appears in the draft or transcript.
-2. Keep the gated exceptions: a specific next-step offer naming a concrete action, a concession of a real error with the reason, and proportionate acknowledgment of real distress.
-3. Change nothing else. The substance, facts, numbers, steps, and code stay untouched. This is a conversational-frame pass, not a content rewrite.
-4. Report what you changed as a short list, so the pass is reviewable.
+1. **Fix** each tic above wherever it appears in the draft or transcript.
+2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one tic survived and means to catch it. Go tic by tic through the list above. For each tic, quote a still-violating line, or clear that tic by name. A blanket "looks clean" is a failed review; you clear a tic only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every line it flagged.
+
+Across all three stages:
+
+- **Keep the gated exceptions:** a specific next-step offer naming a concrete action, a concession of a real error with the reason, and proportionate acknowledgment of real distress.
+- **Change nothing else:** the substance, facts, numbers, steps, and code stay untouched. This is a conversational-frame pass, not a content rewrite.
+- **Report what changed** as a short list, naming the tic each edit served, so the pass is reviewable.
 
 Expect the result to come out shorter.
 

@@ -18,13 +18,20 @@ Apply the talk-better guide. If the full catalog is installed, follow it in full
 - **No question read-back when nothing was ambiguous.** Cut turns that replay the question before answering it. Keep a one-line restatement that resolves a genuine fork.
 - **No over-structuring a small answer.** Remove headers and bullet scaffolding from answers that read cleanly as prose. Keep structure where the content is genuinely a list, sequence, or comparison.
 
-How to run the pass:
+Run the pass in three stages. Keep them distinct; a single combined read is what lets tics through.
 
-1. Fix each tic above wherever it appears in the draft or transcript.
-2. KEEP the gated exceptions: a specific next-step offer naming a concrete action, a concession of a real error with the reason, and proportionate acknowledgment of real distress.
-3. Change nothing else. The substance, facts, numbers, steps, and code stay untouched. This is a conversational-frame pass, not a content rewrite.
-4. Report what you changed as a short list, so the pass is reviewable.
+1. **Fix** each tic above wherever it appears in the draft or transcript.
+2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one tic survived and means to catch it. Go tic by tic through the list above. For each tic, quote a still-violating line, or clear that tic by name. A blanket "looks clean" is a failed review; you clear a tic only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every line it flagged.
+
+Across all three stages:
+
+- **Keep the gated exceptions:** a specific next-step offer naming a concrete action, a concession of a real error with the reason, and proportionate acknowledgment of real distress.
+- **Change nothing else:** the substance, facts, numbers, steps, and code stay untouched. This is a conversational-frame pass, not a content rewrite.
+- **Report what changed** as a short list, naming the tic each edit served, so the pass is reviewable.
 
 Note: this command cleans a draft or transcript. talk-better's real value is always-on, applied to every reply before it goes out, without being asked. The always-on block is in `talk-better-essentials.md`.
 
 Expect the result to come out shorter.
+
+**In Claude Code, dispatch stage 2 to a separate subagent for a stronger pass.** A fresh reviewer with no stake in the draft catches more than self-review. Hand it the fixed text and the tic list, ask it to enumerate violations tic by tic with the offending line quoted, then apply its findings in stage 3. The three-stage protocol above is the portable base; the separate reviewer is the enhancement where the harness supports subagents.
