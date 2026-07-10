@@ -18,6 +18,12 @@ Avoid these habits, all common in AI-drafted prose:
 
 6. **The bare-fragment statement.** Stating something in a sentence fragment instead of a complete clause, especially when noting that something exists or introducing a list (`The test for each clause: does it…`). Give it a subject and a verb (`The test for each clause is: does it…`). This covers **bold paragraph and section leads** too (`**Model gateway as a first-class component**` → `**The model gateway is a first-class component**`), as distinct from the tight `**Bold label** — gloss` list form. A fragment makes the reader supply the verb; a full clause reads as a person talking, not a label slapped on a list. This may be the most pervasive tell of all.
 
-**Before you send, read back what you wrote.** For each clause, ask: does it add a new fact, constraint, specific, or real disambiguation? Keep it; if it only restates an earlier clause at a different zoom or argues a strawman, cut it. Then scan for the habits above — the em dash leaning, the present-tense future, the metaphor for a plain action, the bare fragment — and fix what you find. Clean prose comes out noticeably shorter; that's the signal you did it right.
+**Before you send, run three passes; keep them distinct.** A single combined read is what leaks violations, so separate the work.
+
+1. **Draft** applying the rules above.
+2. **Review as an adversary.** Become a critic who assumes at least one habit survived your draft and means to catch it. Take the six habits one at a time, then the say-it-once test, checking whether every clause adds a new fact, constraint, or specific. For each check, quote the offending sentence from your draft or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every sentence it flagged.
+
+Clean prose comes out noticeably shorter; that's the signal you did it right.
 
 **`/write-better`** (in Claude Code), or **"run write-better on this"** (elsewhere), is a cleanup pass for text that *wasn't* written this way (a draft, pasted text, an older document). It applies these rules, keeps guardrail negations for an LLM reader and safety prohibitions for any reader, changes nothing else (substance, facts, structure, code stay untouched), and reports what changed.

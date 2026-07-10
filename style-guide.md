@@ -157,18 +157,21 @@ For each clause, ask: **does this add new information?**
 
 A topic sentence followed by *new* detail is good writing. A topic sentence followed by the same idea reworded is not.
 
+This is the check the adversarial review pass runs, one clause at a time.
+
 ---
 
 ## On command: write better
 
-In Claude Code, type **`/write-better`** (optionally with a file or path) to run a focused edit that conforms a document to this guide and changes nothing else. On Claude.ai or Cowork, say **"run write-better on this"**. Either way, the pass is:
+In Claude Code, type **`/write-better`** (optionally with a file or path) to run a focused edit that conforms a document to this guide and changes nothing else. On Claude.ai or Cowork, say **"run write-better on this"**. Run it in three stages:
 
-1. **Fix violations** of the rules above.
-2. **Keep guardrail negations for an LLM reader, and safety prohibitions for any reader.** In LLM-facing text (agent prompts, runbooks, skills, tool descriptions), keep an operational `do NOT X` / "read from the replica, not the primary" that steers an action, since naming the failure mode there improves reliability. Keep outright safety prohibitions (`never force-push to main`, "do not delete the prod table") for any audience. In human-facing prose, cut the foil and state the point positively, even when the negated alternative was a genuine option.
-3. **Change nothing else.** Leave the substance, facts, numbers, steps, structure, headings, and code untouched. It's a style pass, not a rewrite. Don't reorganize, don't add, don't "improve" wording beyond conforming to the guide.
-4. **Report what changed** — a short list of the edits, so the pass is reviewable.
+1. **Fix** the rule violations above.
+2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one violation survived and means to catch it. Go rule by rule, then run the say-it-once test from [The test](#the-test) above, checking that every clause adds a new fact, constraint, or specific. For each check, quote a still-violating sentence, or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every sentence it flagged.
 
-Expect a styled document to come out noticeably shorter.
+Throughout, keep guardrail negations for an LLM reader and safety prohibitions for any audience (see A1); change nothing else, leaving substance, facts, numbers, steps, structure, headings, and code untouched; and report what changed as a short list, naming the rule each edit served.
+
+In Claude Code, dispatch stage 2 to a separate reviewer subagent for a stronger pass. Expect a styled document to come out noticeably shorter.
 
 ---
 
@@ -191,6 +194,7 @@ Copy this template, fill it in, and slot it under the right category (give it th
 
 ## Changelog
 
+- **2026-07-10 — Three-pass protocol replaces the single read-back self-check.** essentials.md, the `/write-better` command, and the skill now run three distinct passes (draft, adversarial review, rewrite) instead of one combined self-check; the adversarial review pass assumes at least one violation survived and clears each check only after quoting or naming it; this document's own "On command" section was updated to run the say-it-once test in the adversarial review stage too.
 - **2026-06-21 — E2 added (Empty adverbs).** New rule cutting "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly" when they intensify or hedge without adding meaning. Cross-references talk-better's T5 (Performed sincerity), which owns the conversational-frame use of the same words.
 - **2026-06-08 — A1 exception gated by audience.** The old "keep the contrast" exception fired whenever the negated alternative was "a real, likely-wrong choice," which was broad enough to wave through rhetorical foils in human-facing prose (the catching case: "a bake-off, not a commitment to a framework"). The exception now keeps "X, not Y" only for an LLM reader, where naming the failure mode improves reliability, or for an outright safety prohibition, which holds for any audience. Human-facing prose gets no exception.
 - **2026-06-08 — B5 covers bold leads.** B5 now states that a bold paragraph or section lead is a sentence and takes a subject and a verb ("The model gateway is a first-class component", not the bare "Model gateway as a first-class component"), distinct from the `**Bold label** — gloss` definition-list form E1 allows.

@@ -15,12 +15,17 @@ Enforce these core rules:
 - **Plain verbs for plain actions** ("we'll defer pricing", not "pricing stays parked").
 - **Complete the clause, including bold leads** — no bare fragments; a bold paragraph lead is a sentence and takes a verb ("The model gateway is a first-class component", not "Model gateway as a first-class component").
 
-How to run the pass:
+Run the pass in three stages. Keep them distinct; a single combined read is what lets violations through.
 
-1. Fix the style violations above.
-2. Keep guardrail negations for an LLM reader (agent prompts, runbooks, skills, tool descriptions) and safety prohibitions ("never force-push to main") for any audience. In human-facing prose, cut the foil and state the point positively.
-3. Change nothing else: substance, facts, numbers, steps, structure, headings, and code stay untouched. This is a style pass, not a rewrite.
-4. Report what you changed as a short list, so the edit is reviewable.
+1. **Fix** the style violations above.
+2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one violation survived and means to catch it. Go rule by rule through the list above. For each rule, quote a still-violating sentence, or clear that rule by name. A blanket "looks clean" is a failed review; you clear a rule only after reading for it.
+3. **Rewrite** from the review, fixing or cutting every sentence it flagged.
+
+Across all three stages:
+
+- **Keep guardrail negations** for an LLM reader (agent prompts, runbooks, skills, tool descriptions) and safety prohibitions ("never force-push to main") for any audience. In human-facing prose, cut the foil and state the point positively.
+- **Change nothing else:** substance, facts, numbers, steps, structure, headings, and code stay untouched. This is a style pass, not a rewrite.
+- **Report what changed** as a short list, naming the rule each edit served, so the pass is reviewable.
 
 Expect the result to come out shorter.
 
