@@ -4,7 +4,7 @@ Write Better is a small, drop-in style guide that makes Claude write plainly and
 
 There are three pieces:
 
-- **`essentials.md`** — a short block (~400 words) of always-on rules. Paste it into wherever your Claude reads standing instructions; once it's in, Claude writes in this style by default, with no command to invoke.
+- **`essentials.md`** — a short block (~800 words) of always-on rules. Paste it into wherever your Claude reads standing instructions; once it's in, Claude writes in this style by default, with no command to invoke.
 - **`style-guide.md`** — the full rule catalog. Keep it as a reference document Claude can consult when you're writing or editing something that matters.
 - **`write-better.md`** — a `/write-better` slash command for Claude Code that runs the pass on a document on demand.
 
