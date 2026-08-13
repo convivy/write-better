@@ -65,9 +65,10 @@ thing being approved.
 
 ### The shape that works
 
-What's broken, in the words a person would say out loud. The fix, in the same register. **The
-catch** — where the fix falls short and what is unmeasured, which readers need most and authors
-omit most. What you're guessing, as a table. Then the ask, as commitments.
+Open on what is broken, in the words a person would say out loud. The fix follows in the same
+register. **The catch** comes next and covers where that fix falls short and what is still
+unmeasured; readers need it most and authors omit it most. A table states what you are
+guessing. The ask closes, spelled out as commitments.
 
 **The target is five minutes to read, and to argue with.** Arguing is the harder half, because a
 reader who follows a document but cannot find its weak point has nothing to push back on.
