@@ -39,14 +39,23 @@ cross-references there cost nothing.
 The closing "approve this" paragraph is where a dense document does its worst damage, because the
 labels feel meaningful to whoever assigned them:
 
-✂️ **Cut:**
+✂️ **Cut** — the real thing, quoted whole, because the damage is spread across all three buttons
+and a shortened version hides that:
+
 > Approve this: build Slice 1 (the smoke-gated harness) and run Slice 2's experiments E1 through
 > E5 now, with Slices 3 through 5 pre-approved to ship as specified once Jay picks
 > SEED_RANK_WINDOW and the Decision 3 branch from Slice 2's report. Approving takes Q1 through Q4
-> as recommended and adopts the supersession table above.
+> as recommended and adopts the supersession table above, including carrying ADR-0117's Decisions
+> 4, 6 and 7. Redirect for a different sweep, an affinity term designed now, the damp ahead of
+> ADR-0109 Decision 3, or an untrusted-metric fast path. Deny to hold seed work and build ADR-0110
+> as accepted first, against rosters this measurement says are half noise.
 
-Every noun is a pointer. `Q1`. `Slice 3`. `E1 through E5`. `SEED_RANK_WINDOW`. A reader who must
-chase four of them to learn what they are agreeing to cannot agree to it.
+Every noun is a pointer: `Slice 1`, `E1 through E5`, `SEED_RANK_WINDOW`, `Q1 through Q4`,
+`ADR-0117's Decisions 4, 6 and 7`, `the damp`, `ADR-0109 Decision 3`, `ADR-0110`. The reader who
+wrote the software could not follow it. Note that **Redirect and Deny are no better than
+Approve** — the redirect sentence offers four alternatives, each named only by a label, and the
+deny sentence turns on a document the reader would have to go read. Three buttons, none of them
+legible.
 
 ✅ **Keep:**
 > Approve this: no taste weighting goes into the draw until a measurement says it is needed.
