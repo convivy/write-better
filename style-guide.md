@@ -28,14 +28,13 @@ line, and carried a supersession table and a per-slice test plan. All of it was 
 coder. The person who had to approve it could not follow it.
 
 **The test is whether the human's decision depends on parsing THAT text.** A PR body fails it even
-though a person merges the PR, because the merge turns on the review verdict and the diff. Where a
-human must parse the text to decide, the rule applies however many machines read it first.
+though a person merges the PR, because the merge turns on the review verdict and the diff. It applies however many machines read the text first.
 
 ### The ask is where it fails, and the author cannot see it
 
 The labels feel meaningful to whoever assigned them:
 
-✂️ **Cut** — quoted whole, because all three buttons fail and a shortened version hides that:
+✂️ **Cut.** It is quoted whole, because all three buttons fail and a shortened version hides that:
 
 > Approve this: build Slice 1 (the smoke-gated harness) and run Slice 2's experiments E1 through
 > E5 now, with Slices 3 through 5 pre-approved to ship as specified once Jay picks
