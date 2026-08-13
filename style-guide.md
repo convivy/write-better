@@ -14,6 +14,70 @@ Expect prose written this way to come out noticeably shorter. That's the point.
 
 ---
 
+## Write for the person who has to act
+
+Everything above is about the prose. This is about the reader.
+
+**A document someone must approve is addressed to that person.** Not to the engineer who will
+implement it, not to the model that will read it next — to whoever has to say yes. If they cannot
+reason about what they are agreeing to, their approval is not an approval. Jay's ruling, on an
+architecture decision record that was technically excellent and unreadable:
+
+> A human approving a non-human-readable ADR means nothing.
+
+The document in question diagnosed a real defect correctly, quoted every constant with its file
+and line, carried a supersession table and a per-slice test plan. All of that was for the coder.
+The person who had to approve it could not follow it, so it did not work.
+
+**This applies to decision records, decisions raised for a human to call, and anything else a
+person must act on.** It does not apply to text written for a machine reader that no human has to
+approve — a PR body a reviewing agent reads to do its job is agent-facing, and dense
+cross-references there cost nothing.
+
+### The failure concentrates in the ask, where the author cannot see it
+
+The closing "approve this" paragraph is where a dense document does its worst damage, because the
+labels feel meaningful to whoever assigned them:
+
+✂️ **Cut:**
+> Approve this: build Slice 1 (the smoke-gated harness) and run Slice 2's experiments E1 through
+> E5 now, with Slices 3 through 5 pre-approved to ship as specified once Jay picks
+> SEED_RANK_WINDOW and the Decision 3 branch from Slice 2's report. Approving takes Q1 through Q4
+> as recommended and adopts the supersession table above.
+
+Every noun is a pointer. `Q1`. `Slice 3`. `E1 through E5`. `SEED_RANK_WINDOW`. A reader who must
+chase four of them to learn what they are agreeing to cannot agree to it.
+
+✅ **Keep:**
+> Approve this: no taste weighting goes into the draw until a measurement says it is needed.
+
+Say the commitment in words. If the commitment cannot be said in words, it is not yet a decision.
+
+### Keep the numbers, cut the citations
+
+Concrete figures are what make a design believable, and they survive the rewrite: *9,689
+candidate artists*, *an intruder scoring 0.17 while a real scene-mate sat at 0.74*, *53% against
+41%*. What goes is `seeds.py:453`, constant names, and chains of cross-references to other
+documents. Name another record only where the reader needs to know that document's fate.
+
+**Send the implementation detail to the build plan**, and close with a one-line pointer saying so.
+A plain-English summary bolted on top of a dense document does not fix it: the dense document is
+still the thing being approved.
+
+### The shape that works
+
+1. **What's broken**, in the words a person would say out loud.
+2. **The fix**, in the same register.
+3. **The catch** — where the fix falls short, and what is still unmeasured. Readers need this most
+   and authors omit it most.
+4. **What I'm guessing**, as a table.
+5. **The ask**, spelled out as commitments.
+
+Target: **five minutes to read, and to argue with.** Argue with is the harder half — a reader who
+follows a document but cannot find its weak point has not been given enough to push back on.
+
+---
+
 ## The rules
 
 Rules are grouped by category. Each one states the rule, why it matters, a ✂️/✅ example, and any exception.
@@ -194,6 +258,7 @@ Copy this template, fill it in, and slot it under the right category (give it th
 
 ## Changelog
 
+- **2026-08-12 — "Write for the person who has to act" added.** A new principle-level section: a document someone must approve is addressed to that person, and an approval the reader cannot reason about is not an approval. It names where the failure concentrates (the closing approve/redirect/deny block, whose labels feel meaningful only to their author), what survives a rewrite (measured numbers) and what does not (file:line citations, cross-reference chains), and the five-part shape that works. Scoped to documents a human must act on; text written for a machine reader that no human approves is exempt. Prompted by an ADR that was technically correct and unreadable, and by Jay's ruling on it: "A human approving a non-human-readable ADR means nothing."
 - **2026-07-10 — E2 promoted to the always-on surfaces.** essentials.md gains habit 7 (Empty adverbs) and the `/write-better` command and skill gain the matching core rule; E2 previously existed only in this catalog, and the enforcement passes in the other surfaces enumerate only their own listed habits/rules, so a first draft never checked it.
 - **2026-07-10 — Three-pass protocol replaces the single read-back self-check.** essentials.md, the `/write-better` command, and the skill now run three distinct passes (draft, adversarial review, rewrite) instead of one combined self-check; the adversarial review pass assumes at least one violation survived and clears each check only after quoting or naming it; this document's own "On command" section was updated to run the say-it-once test in the adversarial review stage too.
 - **2026-06-21 — E2 added (Empty adverbs).** New rule cutting "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly" when they intensify or hedge without adding meaning. Cross-references talk-better's T5 (Performed sincerity), which owns the conversational-frame use of the same words.
