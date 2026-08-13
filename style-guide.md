@@ -16,32 +16,26 @@ Expect prose written this way to come out noticeably shorter. That's the point.
 
 ## Write for the person who has to act
 
-Everything above is about the prose. This is about the reader.
+The rules below are about the prose. This one is about the reader.
 
 **A document someone must approve is addressed to whoever has to say yes.** If they cannot reason
-about what they are agreeing to, their approval is not an approval. Jay's ruling, on an
-architecture decision record that was technically excellent and unreadable:
+about what they are agreeing to, their approval is not an approval:
 
-> A human approving a non-human-readable ADR means nothing.
+> A human approving a non-human-readable ADR means nothing. — Jay
 
-The document in question diagnosed a real defect correctly, quoted every constant with its file
-and line, carried a supersession table and a per-slice test plan. All of that was for the coder.
-The person who had to approve it could not follow it, so it did not work.
+The document that prompted this diagnosed a real defect, quoted every constant with its file and
+line, and carried a supersession table and a per-slice test plan. All of it was written for the
+coder. The person who had to approve it could not follow it.
 
-**This applies to decision records, decisions raised for a human to call, and anything else a
-person must act on.** The test is whether the human's decision depends on parsing THAT text. A PR
-body fails that test even though a person merges the PR, because the merge turns on the review
-verdict and the diff rather than on the body's prose, and a reviewing agent reads the body to do
-its job. Where a human would have to parse the text to decide, the rule applies however many
-machines read it first.
+**The test is whether the human's decision depends on parsing THAT text.** A PR body fails it even
+though a person merges the PR, because the merge turns on the review verdict and the diff. Where a
+human must parse the text to decide, the rule applies however many machines read it first.
 
-### The failure concentrates in the ask, where the author cannot see it
+### The ask is where it fails, and the author cannot see it
 
-The closing "approve this" paragraph is where a dense document does its worst damage, because the
-labels feel meaningful to whoever assigned them:
+The labels feel meaningful to whoever assigned them:
 
-✂️ **Cut** — the real thing, quoted whole, because the damage is spread across all three buttons
-and a shortened version hides that:
+✂️ **Cut** — quoted whole, because all three buttons fail and a shortened version hides that:
 
 > Approve this: build Slice 1 (the smoke-gated harness) and run Slice 2's experiments E1 through
 > E5 now, with Slices 3 through 5 pre-approved to ship as specified once Jay picks
@@ -51,40 +45,32 @@ and a shortened version hides that:
 > ADR-0109 Decision 3, or an untrusted-metric fast path. Deny to hold seed work and build ADR-0110
 > as accepted first, against rosters this measurement says are half noise.
 
-Every noun is a pointer: `Slice 1`, `E1 through E5`, `SEED_RANK_WINDOW`, `Q1 through Q4`,
-`ADR-0117's Decisions 4, 6 and 7`, `the damp`, `ADR-0109 Decision 3`, `ADR-0110`. The reader who
-wrote the software could not follow it. **Redirect and Deny are no better than Approve.** The redirect
-sentence offers four alternatives, each named only by a label, and the deny sentence turns on a
-document the reader would have to go read. Three buttons, none of them legible.
+Every noun is a pointer, and the person who wrote the software could not follow it. Redirect names
+four alternatives by label alone; Deny turns on a document the reader would have to go read.
 
 ✅ **Keep:**
 > Approve this: no taste weighting goes into the draw until a measurement says it is needed.
 
-Say the commitment in words. If the commitment cannot be said in words, it is not yet a decision.
+If the commitment cannot be said in words, it is not yet a decision.
 
 ### Keep the numbers, cut the citations
 
-Concrete figures are what make a design believable, and they survive the rewrite: *9,689
-candidate artists*, *an intruder scoring 0.17 while a real scene-mate sat at 0.74*, *53% against
-41%*. What goes is `seeds.py:453`, constant names, and chains of cross-references to other
-documents. Name another record only where the reader needs to know that document's fate.
+Figures are what make a design believable, so they survive: *9,689 candidate artists*, *an
+intruder scoring 0.17 while a real scene-mate sat at 0.74*. What goes is `seeds.py:453`, constant
+names, and cross-reference chains. Name another record only where the reader needs to know its
+fate. Implementation detail goes to the build plan, under a one-line pointer.
 
-**Send the implementation detail to the build plan**, and close with a one-line pointer saying so.
-A plain-English summary bolted on top of a dense document does not fix it, because the dense
-document is still the thing being approved.
+**Never bolt a plain-English summary onto a dense document.** The dense document is still the
+thing being approved.
 
 ### The shape that works
 
-1. **What's broken**, in the words a person would say out loud.
-2. **The fix**, in the same register.
-3. **The catch** — where the fix falls short, and what is still unmeasured. Readers need this most
-   and authors omit it most.
-4. **What I'm guessing**, as a table.
-5. **The ask**, spelled out as commitments.
+What's broken, in the words a person would say out loud. The fix, in the same register. **The
+catch** — where the fix falls short and what is unmeasured, which readers need most and authors
+omit most. What you're guessing, as a table. Then the ask, as commitments.
 
-**The target is five minutes to read, and to argue with.** Arguing with it is the harder half. A
-reader who follows a document but cannot find its weak point has not been given enough to push
-back on.
+**The target is five minutes to read, and to argue with.** Arguing is the harder half, because a
+reader who follows a document but cannot find its weak point has nothing to push back on.
 
 ---
 
