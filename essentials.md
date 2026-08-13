@@ -20,6 +20,8 @@ Avoid these habits, all common in AI-drafted prose:
 
 7. **Empty adverbs.** Cut intensifiers and hedges that add no meaning: "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly" (`Here's how this generalizes, honestly` → `Here's how this generalizes.`). They promise emphasis or candor and deliver neither, and a sincerity marker backfires: flagging this sentence as the honest one implies the rest weren't. State the judgment; it stands on its own.
 
+**A document someone must approve is addressed to whoever has to say yes.** That covers a decision record and a decision raised for someone to call. An approval the reader cannot reason about is not an approval, and the damage concentrates in the closing ask, where every noun turns into a pointer only the author can resolve. The test is whether the human's decision depends on parsing THAT text; see **Write for the person who has to act** in the full guide.
+
 **Before you send, run three passes; keep them distinct.** A single combined read is what leaks violations, so separate the work.
 
 1. **Draft** applying the rules above.

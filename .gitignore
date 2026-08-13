@@ -1,0 +1,8 @@
+# Internal Convivy workspace tooling — NOT part of the public Write Better guide.
+# Keeps the agent crew + workspace role doc out of the public repo. Created by the
+# substrate steward 2026-06-21; left uncommitted by default (it protects locally
+# even untracked). Commit it only if you want the protection shared/durable.
+.claude/
+.runs/
+CLAUDE.md
+.DS_Store
