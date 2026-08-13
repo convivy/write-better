@@ -18,9 +18,8 @@ Expect prose written this way to come out noticeably shorter. That's the point.
 
 Everything above is about the prose. This is about the reader.
 
-**A document someone must approve is addressed to that person.** Not to the engineer who will
-implement it, not to the model that will read it next — to whoever has to say yes. If they cannot
-reason about what they are agreeing to, their approval is not an approval. Jay's ruling, on an
+**A document someone must approve is addressed to whoever has to say yes.** If they cannot reason
+about what they are agreeing to, their approval is not an approval. Jay's ruling, on an
 architecture decision record that was technically excellent and unreadable:
 
 > A human approving a non-human-readable ADR means nothing.
@@ -30,9 +29,11 @@ and line, carried a supersession table and a per-slice test plan. All of that wa
 The person who had to approve it could not follow it, so it did not work.
 
 **This applies to decision records, decisions raised for a human to call, and anything else a
-person must act on.** It does not apply to text written for a machine reader that no human has to
-approve — a PR body a reviewing agent reads to do its job is agent-facing, and dense
-cross-references there cost nothing.
+person must act on.** The test is whether the human's decision depends on parsing THAT text. A PR
+body fails that test even though a person merges the PR, because the merge turns on the review
+verdict and the diff rather than on the body's prose, and a reviewing agent reads the body to do
+its job. Where a human would have to parse the text to decide, the rule applies however many
+machines read it first.
 
 ### The failure concentrates in the ask, where the author cannot see it
 
@@ -52,10 +53,9 @@ and a shortened version hides that:
 
 Every noun is a pointer: `Slice 1`, `E1 through E5`, `SEED_RANK_WINDOW`, `Q1 through Q4`,
 `ADR-0117's Decisions 4, 6 and 7`, `the damp`, `ADR-0109 Decision 3`, `ADR-0110`. The reader who
-wrote the software could not follow it. Note that **Redirect and Deny are no better than
-Approve** — the redirect sentence offers four alternatives, each named only by a label, and the
-deny sentence turns on a document the reader would have to go read. Three buttons, none of them
-legible.
+wrote the software could not follow it. **Redirect and Deny are no better than Approve.** The redirect
+sentence offers four alternatives, each named only by a label, and the deny sentence turns on a
+document the reader would have to go read. Three buttons, none of them legible.
 
 ✅ **Keep:**
 > Approve this: no taste weighting goes into the draw until a measurement says it is needed.
@@ -70,8 +70,8 @@ candidate artists*, *an intruder scoring 0.17 while a real scene-mate sat at 0.7
 documents. Name another record only where the reader needs to know that document's fate.
 
 **Send the implementation detail to the build plan**, and close with a one-line pointer saying so.
-A plain-English summary bolted on top of a dense document does not fix it: the dense document is
-still the thing being approved.
+A plain-English summary bolted on top of a dense document does not fix it, because the dense
+document is still the thing being approved.
 
 ### The shape that works
 
@@ -82,8 +82,9 @@ still the thing being approved.
 4. **What I'm guessing**, as a table.
 5. **The ask**, spelled out as commitments.
 
-Target: **five minutes to read, and to argue with.** Argue with is the harder half — a reader who
-follows a document but cannot find its weak point has not been given enough to push back on.
+**The target is five minutes to read, and to argue with.** Arguing with it is the harder half. A
+reader who follows a document but cannot find its weak point has not been given enough to push
+back on.
 
 ---
 
