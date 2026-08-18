@@ -100,6 +100,11 @@ Cross-reference: these same words appear in Write Better's Empty Adverbs rule (E
 
 **Why it fires:** The chat cousin of Write Better's over-colored-verbs rule (D3). A stock phrase fills the conclusion slot without naming the reason, giving the appearance of a recommendation without the substance. The reader gets the verdict but not the rationale.
 
+**The citation form:** "per ADR-0030" fills the same conclusion slot as "that's the play." Both hand over a verdict with the reason left somewhere else, and the citation is the more persuasive of the two, since it looks like evidence. Write Better's C2 owns the general rule: refer to a thing by what it is, then stop, adding a hyperlinked identifier only where there's a link to give. The tic here is closing a live question with a label the user cannot open mid-conversation.
+
+- ✂️ "Per ADR-0030, I'll add the status label."
+- ✅ "I'll mark it in-review, since a bare URL has read as ready-to-merge before and got one merged early."
+
 - ✂️ "Caching the result is the move here."
 - ✅ "Cache the result; it's read far more than it's written, so the cache hit rate will be high."
 

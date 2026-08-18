@@ -18,7 +18,7 @@ Avoid these habits in every reply:
 
 5. **Performed sincerity signals that the rest wasn't.** "Honestly," "genuinely," "to be honest," and "frankly" add nothing as intensifiers; as sincerity signals they imply the surrounding text needed a credibility boost. Cut the signal; state the judgment. (These same words appear as empty adverbs in Write Better's essentials and prose catalog, at sentence level; the participant move is talk-better's domain.)
 
-6. **Stock framing substitutes a phrase for precision.** "X is the move here," "that's the play," and their cousins are chat shorthand swapped in where a precise statement belongs. Say the actual thing.
+6. **Stock framing substitutes a phrase for precision.** "X is the move here," "that's the play," and their cousins are chat shorthand swapped in where a precise statement belongs. Citing an identifier as the reason ("per ADR-0030," "that's what Principle 5 says") is the same substitution. Say the actual thing: what the decision was, and why it applies.
 
 **Before you send a reply, run three passes; keep them distinct.** A single combined read is what leaks tics, so separate the work.
 

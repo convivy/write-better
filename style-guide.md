@@ -62,6 +62,11 @@ fate. Implementation detail goes to the build plan, under a one-line pointer.
 **Never bolt a plain-English summary onto a dense document.** The dense document is still the
 thing being approved.
 
+This section follows C2's general rule: name a thing by its substance, not its label, and cite it
+only where the citation is a link the reader can act on immediately. The approval document is
+where skipping that bar does the most damage, because the reader's only options are approve,
+redirect, and deny.
+
 ### The shape that works
 
 Open on what is broken, in the words a person would say out loud. The fix follows in the same
@@ -150,6 +155,25 @@ It also shows up as padded appositive lists that zoom on one idea: "their data, 
 
 - ✂️ "The `region` field is load-bearing for billing."
 - ✅ "The billing job reads each account's `region` field to pick the tax rate."
+
+#### C2 — Name the thing, not its label
+**Rule:** Refer to a thing by what it is, then stop. Don't let an identifier, position, handle, or category (`ADR-0030`, `Principle 5`, `yesterday's decision`, `the decision doc`) stand in for the thing itself. If you also cite the record, add the handle after the substance, in parentheses, as a hyperlink; where you have nothing to link, leave the handle out.
+**Why:** An identifier like `ADR-0030` or `Principle 5`, a deictic reference like `yesterday's decision`, or a generic noun like `the decision doc` promises the substance exists without paying it off. It costs the writer nothing and costs every reader a lookup, or, where there's nothing to look up, a re-ask; most skip either and get a sentence they cannot evaluate. This is C1's problem, one step further out; the label states existence and hides identity.
+
+- ✂️ "Per ADR-0030, this PR posts the URL with a status label."
+- ✅ "This PR posts the URL with a status label, because a bare URL has read as ready to merge and has caused a premature merge ([ADR-0030](../decisions/0030-pr-url-labeling.md))."
+- ✂️ "Per yesterday's decision, hold the seed work."
+- ✅ "Hold the seed work until a measurement shows taste weighting helps."
+- ✂️ "This violates Principle 5."
+- ✅ "This narrates a future plan in the present tense, which reads as pressure rather than a request."
+- ✂️ "The decision doc says we're deferring this."
+- ✅ "We're deferring auth work until Q2."
+
+**A hyperlinked identifier may follow the substance; a bare one may not.** `([ADR-0030](...))` after the sentence costs a few words and gives the reader one click to the record. An unlinked code asks the reader to already know how to resolve it, the same failure the rule targets, so it isn't kept as a fallback. Keeping the identifier isn't a judgment call about what the reader might need; it depends only on whether you have a link to give them.
+
+**For an LLM reader:** you will reach for a bare identifier exactly when you hold the handle and not the substance, having seen the label in a filename, an instruction line, or a commit message. That is the trigger condition. When it fires, read the thing before you cite it. If you cannot read it, write what you know and mark the rest unread ("there is a decision on PR-URL labeling that I have not read"), rather than inventing the substance or falling back to the bare handle. "The reader can probably find it" is not a safe test; the link is.
+
+**Exception:** A citation line, a bibliography entry, a link, a changelog row, a heading cross-reference, or a machine-read field (`Reverts: #412`, `ARCH-364`) is a place where the identifier is the content. Leave those alone.
 
 ### D. Tone & voice
 
@@ -254,6 +278,17 @@ Copy this template, fill it in, and slot it under the right category (give it th
 
 ## Changelog
 
+- **2026-08-18 — C2 added (Name the thing, not its label), and promoted to the always-on
+  surfaces.** A new clarity rule: refer to a thing by what it is, then stop, rather than letting
+  an identifier like `ADR-0030` or `Principle 5`, a deictic reference like `yesterday's decision`,
+  or a generic noun like `the decision doc` stand in for the thing itself. A handle may follow the
+  substance only as a hyperlink in parentheses; with nothing to link, it drops rather than staying
+  bare, so the writer isn't left to judge whether the reader "can probably find it."
+  `essentials.md` gains habit 8, and its review pass now counts eight habits; the `/write-better`
+  command and the skill gain the matching core rule, since those passes enumerate only their own
+  listed rules. Citation lines, links, changelog rows, and machine-read fields are exempt.
+  talk-better's T6 gains a cross-reference for the conversational form, where a link is rarely
+  available and the identifier drops.
 - **2026-08-12 — "Write for the person who has to act" added.** A new principle-level section: a document someone must approve is addressed to that person, and an approval the reader cannot reason about is not an approval. It names where the failure concentrates (the closing approve/redirect/deny block, whose labels feel meaningful only to their author), what survives a rewrite (measured numbers) and what does not (file:line citations, cross-reference chains), and the five-part shape that works. Scoped to documents a human must act on; text written for a machine reader that no human approves is exempt. Prompted by an ADR that was technically correct and unreadable, and by Jay's ruling on it: "A human approving a non-human-readable ADR means nothing."
 - **2026-07-10 — E2 promoted to the always-on surfaces.** essentials.md gains habit 7 (Empty adverbs) and the `/write-better` command and skill gain the matching core rule; E2 previously existed only in this catalog, and the enforcement passes in the other surfaces enumerate only their own listed habits/rules, so a first draft never checked it.
 - **2026-07-10 — Three-pass protocol replaces the single read-back self-check.** essentials.md, the `/write-better` command, and the skill now run three distinct passes (draft, adversarial review, rewrite) instead of one combined self-check; the adversarial review pass assumes at least one violation survived and clears each check only after quoting or naming it; this document's own "On command" section was updated to run the say-it-once test in the adversarial review stage too.

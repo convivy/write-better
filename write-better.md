@@ -15,6 +15,7 @@ Apply the Write Better writing guide. If the full guide is installed, follow it 
 - **Plain verbs for plain actions** ("we'll defer pricing", not "pricing stays parked").
 - **Complete the clause, including bold leads** (no bare fragments; a bold paragraph lead is a sentence and takes a verb: "The model gateway is a first-class component", not "Model gateway as a first-class component").
 - **No empty adverbs** ("really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly"); they promise emphasis or candor and deliver neither.
+- **Name the thing, not its label.** Say what a thing is and why it matters here, then stop; add the identifier only as a hyperlinked parenthetical after the substance, and only where you have something to link to ("this PR labels the URL, because a bare URL reads as ready to merge and has caused a premature merge ([ADR-0030](../decisions/0030-pr-url-labeling.md))", not "per ADR-0030, this PR labels the URL"). With nothing to link, drop the identifier rather than keeping it bare. If you can't state what an identifier stands for, read it before you cite it. Citation lines, links, changelog rows, and machine-read fields keep their identifiers as they are.
 
 Run the pass in three stages. Keep them distinct; a single combined read is what lets violations through.
 
