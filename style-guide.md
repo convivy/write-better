@@ -222,7 +222,7 @@ These three travel together. They're how to write about plans and next steps lik
 - ✂️ "This is really very important and basically just a simple fix."
 - ✅ "This matters; the fix is one line."
 
-**Cross-reference:** "Genuinely" and "honestly" also appear in talk-better's Performed Sincerity rule (T5) as a participant-level move, prefacing a judgment to signal credibility. The sentence-level deadweight form is this rule's domain; the conversational-frame move is T5's.
+**Cross-reference:** "Genuinely" and "honestly" also appear in talk-better's Performed Sincerity rule (T6) as a participant-level move, prefacing a judgment to signal credibility. The sentence-level deadweight form is this rule's domain; the conversational-frame move is T6's.
 
 ### F. Your own rules
 
@@ -278,6 +278,17 @@ Copy this template, fill it in, and slot it under the right category (give it th
 
 ## Changelog
 
+- **2026-08-22 — talk-better's bare-label rule promoted from a T6 cross-reference to its own
+  standalone tic (T4).** The citation form of stock framing ("per ADR-0030") kept happening in
+  live chat despite the cross-reference added alongside C2, because it was filed under a
+  different tic's trigger pattern and delegated to a document a live turn never re-reads.
+  talk-better-guide.md gains T4 (Bare-label reference), with its own mechanism, a delete-the-
+  identifier test, and five before/after pairs; T6 (now T7, Stock framing) keeps only its
+  original stock-phrase pair and a pointer to T4. talk-better-essentials.md gains item 4, and
+  its review pass now runs three questions instead of two, adding "can the reader act on the
+  turn without opening anything." The exception is narrower than C2's: a handle the assistant
+  coined never becomes safe to reuse bare, no matter how many turns have passed since it was
+  introduced; only a handle the human supplied, or literal content like a path or URL, is exempt.
 - **2026-08-18 — C2 added (Name the thing, not its label), and promoted to the always-on
   surfaces.** A new clarity rule: refer to a thing by what it is, then stop, rather than letting
   an identifier like `ADR-0030` or `Principle 5`, a deictic reference like `yesterday's decision`,
