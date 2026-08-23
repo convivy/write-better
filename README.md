@@ -18,8 +18,8 @@ talk-better is a companion guide for the conversational frame of a live chat tur
 
 There are three pieces:
 
-- **`talk-better-essentials.md`** — the always-on block for live turns. It covers the six most common conversational tells and installs the same way as `essentials.md`.
-- **`talk-better-guide.md`** — the full ten-tic catalog, with the mechanism for each tell, before/after pairs, and gated exceptions. Pull it on demand the same way as `style-guide.md`.
+- **`talk-better-essentials.md`** — the always-on block for live turns. It covers the seven most common conversational tells and installs the same way as `essentials.md`.
+- **`talk-better-guide.md`** — the full eleven-tic catalog, with the mechanism for each tell, before/after pairs, and gated exceptions. Pull it on demand the same way as `style-guide.md`.
 - **`talk-better.md`** — the `/talk-better` slash command, a cleanup pass for a draft reply or pasted transcript, parallel to `/write-better`.
 
 ---
