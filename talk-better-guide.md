@@ -49,7 +49,7 @@ Rules are grouped by impact. Each one states the tic, explains the mechanism (wh
 - ✂️ "I've updated the config. Let me know if there's anything else — happy to assist further!"
 - ✅ "I've updated the config. The four call sites in `api/` still pass the old flag — want me to update those too?"
 
-**Exception — gated keep:** A specific next-step offer naming a concrete action is not this tic. "Want me to wire up the test for it?" proposes something real. The tell is the generic sign-off that fits any turn without modification.
+**Exception — gated keep:** A real next step is not this tic, but state it rather than ask it. "Next I'll wire up the test for it" proposes something real and keeps the work; "Want me to wire up the test for it?" hands back a decision you could have made. Once the opener and the sign-off are gone, the question-shaped offer is where the tic survives — it reads as courtesy and functions as a handoff. The other tell is the generic sign-off that fits any turn without modification.
 
 ---
 
@@ -220,7 +220,7 @@ In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) 
 2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one tic survived and means to catch it. Go tic by tic through the catalog, then run the three-question test from [The test](#the-test) above. For each check, quote a still-violating line, or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
 3. **Rewrite** from the review, fixing or cutting every line it flagged.
 
-Throughout, keep the gated exceptions (a specific next-step offer naming a concrete action, a concession of a real error with the reason, proportionate acknowledgment of real distress); change nothing else, leaving substance, facts, numbers, steps, and code untouched; and report what changed as a short list, naming the tic each edit served.
+Throughout, keep the gated exceptions (a real next step stated as intent rather than asked, a concession of a real error with the reason, proportionate acknowledgment of real distress); change nothing else, leaving substance, facts, numbers, steps, and code untouched; and report what changed as a short list, naming the tic each edit served.
 
 In Claude Code, dispatch stage 2 to a separate reviewer subagent for a stronger pass. Expect a cleaned reply to come out shorter and land faster.
 
