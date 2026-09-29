@@ -47,7 +47,7 @@ Rules are grouped by impact. Each one states the tic, explains the mechanism (wh
 **Sign-off pair:**
 
 - ✂️ "I've updated the config. Let me know if there's anything else — happy to assist further!"
-- ✅ "I've updated the config. The four call sites in `api/` still pass the old flag — want me to update those too?"
+- ✅ "I've updated the config. The four call sites in `api/` still pass the old flag, so next I'll update those."
 
 **Exception — gated keep:** A real next step is not this tic, but state it rather than ask it. "Next I'll wire up the test for it" proposes something real and keeps the work; "Want me to wire up the test for it?" hands back a decision you could have made. Once the opener and the sign-off are gone, the question-shaped offer is where the tic survives — it reads as courtesy and functions as a handoff. The other tell is the generic sign-off that fits any turn without modification.
 
