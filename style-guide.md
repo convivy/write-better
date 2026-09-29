@@ -92,7 +92,7 @@ Rules are grouped by category. Each one states the rule, why it matters, a ✂�
 - ✂️ "We build what we know, not what a market study tells us to build."
 - ✅ "We build what we know."
 
-**Exception — gate the contrast by audience.** Keep the "X, not Y" contrast only when the reader is an LLM, or when the negation is an outright safety prohibition. An LLM reader (agent prompts, runbooks, skills, tool descriptions) measurably benefits from having the failure mode named, so an operational "do X, not Y" that steers an action earns its place there. A human reader gets nothing from the foil, and it reads as an AI tell. So human-facing prose keeps no contrast. State the point positively and cut the foil, even when the negated alternative was a genuine option you weighed.
+**Exception — gate the contrast by audience.** Keep the "X, not Y" contrast only when the reader is an LLM, or when the negation is an outright safety prohibition. An LLM reader (agent prompts, agent runbooks, skills, tool descriptions) measurably benefits from having the failure mode named, so an operational "do X, not Y" that steers an action earns its place there. A human reader gets nothing from the foil, and it reads as an AI tell. So human-facing prose keeps no contrast. State the point positively and cut the foil, even when the negated alternative was a genuine option you weighed.
 
 Outright safety prohibitions sit outside the gate. "Do not delete the prod table" and "never force-push to main" are instructions, not the define-by-negation tell, so they stay for any audience; stripping them from a human runbook would remove a real safety fence.
 
@@ -217,7 +217,7 @@ These three travel together. They're how to write about plans and next steps lik
 
 #### E2 — No empty adverbs
 **Rule:** Cut adverbs that intensify or hedge without adding meaning: "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly."
-**Why:** They promise emphasis or candor but deliver neither. "Really very important" is not more important than "important"; "basically just a simple fix" is not simpler than "a simple fix." Each one the reader encounters erodes trust in the surrounding prose.
+**Why:** They promise emphasis or candor but deliver neither. "Really very important" is not more important than "important"; "basically just a simple fix" is not simpler than "a simple fix." Each one the reader encounters erodes trust in the surrounding prose. A sincerity marker also backfires, because flagging one sentence as the honest one implies the rest were not.
 
 - ✂️ "This is really very important and basically just a simple fix."
 - ✅ "This matters; the fix is one line."
@@ -247,7 +247,7 @@ This is the check the adversarial review pass runs, one clause at a time.
 
 ## On command: write better
 
-In Claude Code, type **`/write-better`** (optionally with a file or path) to run a focused edit that conforms a document to this guide and changes nothing else. On Claude.ai or Cowork, say **"run write-better on this"**. Run it in three stages:
+In Claude Code, type **`/write-better`** (optionally with a file or path) to run a focused edit that conforms a document to this guide and changes nothing else. On Claude.ai or Cowork, say **"run write-better on this"**. Run it in three stages, kept distinct because a single combined read leaks violations:
 
 1. **Fix** the rule violations above.
 2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one violation survived and means to catch it. Go rule by rule, then run the say-it-once test from [The test](#the-test) above, checking that every clause adds a new fact, constraint, or specific. For each check, quote a still-violating sentence, or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
@@ -277,6 +277,18 @@ Copy this template, fill it in, and slot it under the right category (give it th
 ---
 
 ## Changelog
+
+- **2026-09-29 — Both essentials cut to about half.** essentials.md went from 6,459 to 3,228
+  bytes and talk-better-essentials.md from 5,017 to 2,731, because both load into the always-on
+  context of every session and are re-read on every model call. Every bold lead is now a
+  complete clause, and each habit and tic lead is an imperative, which also fixes the fragment
+  leads that broke habit 6. The reason the passes stay distinct (one combined read leaks
+  violations) moved into both On-command sections, the sincerity-backfire reason into E2, and
+  A1, the `/write-better` command, and the skill now say "agent runbooks", since a human runbook
+  is human-facing prose. Rationale, extra examples, and the boundary and organizing-principle
+  explanations now live only in the full guides. No habit or tic was
+  removed. The three-pass protocol keeps its distinct passes, the adversarial reviewer,
+  quote-or-clear-by-name, and the failed blanket "looks clean".
 
 - **2026-08-22 — talk-better's bare-label rule promoted from a T6 cross-reference to its own
   standalone tic (T4).** The citation form of stock framing ("per ADR-0030") kept happening in

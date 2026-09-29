@@ -214,7 +214,7 @@ This is the check the adversarial review pass runs, one turn at a time.
 
 ## On command: talk-better
 
-In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) to run a focused pass that conforms a reply or conversation to this guide and changes nothing else. On Claude.ai or Cowork, say **"run talk-better on this"**. Run it in three stages:
+In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) to run a focused pass that conforms a reply or conversation to this guide and changes nothing else. On Claude.ai or Cowork, say **"run talk-better on this"**. Run it in three stages, kept distinct because a single combined read leaks tics:
 
 1. **Fix** each tic in the catalog above wherever it appears.
 2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one tic survived and means to catch it. Go tic by tic through the catalog, then run the three-question test from [The test](#the-test) above. For each check, quote a still-violating line, or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.

@@ -25,7 +25,7 @@ Run the pass in three stages. Keep them distinct; a single combined read is what
 
 Across all three stages:
 
-- **Keep guardrail negations** for an LLM reader (agent prompts, runbooks, skills, tool descriptions) and safety prohibitions ("never force-push to main") for any audience. In human-facing prose, cut the foil and state the point positively.
+- **Keep guardrail negations** for an LLM reader (agent prompts, agent runbooks, skills, tool descriptions) and safety prohibitions ("never force-push to main") for any audience. In human-facing prose, cut the foil and state the point positively.
 - **Change nothing else:** substance, facts, numbers, steps, structure, headings, and code stay untouched. This is a style pass, not a rewrite.
 - **Report what changed** as a short list, naming the rule each edit served, so the pass is reviewable.
 
