@@ -8,7 +8,7 @@ Run a **talk-better** pass on $ARGUMENTS (if no argument was given, use the draf
 Apply the talk-better guide. If the full catalog is installed, follow it in full (for example `@~/.claude/rules/talk-better-guide.md`, or your project's copy). Either way, enforce the core rules for each turn:
 
 - **No validation opener.** Cut "Great question!", "You're absolutely right!", and similar openers. The answer opens on substance.
-- **No performed willingness.** Cut preamble ("Certainly! I'd be happy to…") and generic sign-offs ("Let me know if you need anything!"). Keep a real next step, stated as intent ("Next I'll…") rather than asked as permission ("Want me to…?").
+- **No performed willingness.** Cut preamble ("Certainly! I'd be happy to…") and generic sign-offs ("Let me know if you need anything!"). Keep a next step only as work the turn did or as the reason it wasn't done (what it waits on, or whose decision it is). A closing offer ("Want me to…?") or closing promise ("Next I'll…") is this tic; rewrite it as the reason when the text gives one, and flag it when it doesn't.
 - **No sycophantic reversal.** Where a turn caves under pushback with no new argument, flag it. Keep concessions of real errors, with the reason stated.
 - **No bare-label reference.** Where a turn hands over a code, ticket or PR number, filename, position ("as mentioned above"), category ("the decision doc"), or a shorthand the assistant coined earlier, restate it as the substance with the handle after it. Keep a handle the human typed and any command, path, or URL they will run; an assistant-coined label is this tic however early in the transcript it was defined. Where the transcript does not contain the substance, flag the line; supplying facts is outside this pass.
 - **No default affect mismatch.** Strip emoji and exclamation-point enthusiasm where the content carries none; keep it where the turn's register genuinely calls for it.
@@ -27,7 +27,7 @@ Run the pass in three stages. Keep them distinct; a single combined read is what
 
 Across all three stages:
 
-- **Keep the gated exceptions:** a real next step stated as intent, a concession of a real error with the reason, and proportionate acknowledgment of real distress.
+- **Keep the gated exceptions:** a next step either done or given with the reason it isn't, a concession of a real error with the reason, and proportionate acknowledgment of real distress.
 - **Change nothing else:** the substance, facts, numbers, steps, and code stay untouched. This is a conversational-frame pass, not a content rewrite.
 - **Report what changed** as a short list, naming the tic each edit served, so the pass is reviewable.
 
