@@ -8,7 +8,7 @@ Run a **Write Better** style pass on $ARGUMENTS (if no argument was given, use t
 Apply the Write Better writing guide. If the full guide is installed, follow it in full (for example `@~/.claude/rules/style-guide.md`, or your project's copy). Either way, enforce these core rules:
 
 - **Say it once, precisely.** Cut any clause that restates an earlier one or argues a point no one would make.
-- **No define-by-negation** ("X, not Y" where Y is a strawman). Keep the contrast only for an LLM reader ("read from the replica, not the primary" in an agent prompt or runbook) or a safety prohibition ("never force-push to main"); in human-facing prose, cut the foil even when Y was a real option.
+- **No define-by-negation** ("X, not Y" where Y is a strawman). Keep the contrast only for an LLM reader ("read from the replica, not the primary" in an agent prompt or agent runbook) or a safety prohibition ("never force-push to main"); in human-facing prose, cut the foil even when Y was a real option.
 - **No broad-to-narrow ramp** (one idea restated at escalating zoom).
 - **Commas and semicolons over mid-sentence em dashes and colons.**
 - **Future events in the future tense or a polite imperative, not the present** ("we will scope" / "please scope", not "Engineering scopes").
