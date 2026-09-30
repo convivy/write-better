@@ -47,9 +47,10 @@ Rules are grouped by impact. Each one states the tic, explains the mechanism (wh
 **Sign-off pair:**
 
 - ✂️ "I've updated the config. Let me know if there's anything else — happy to assist further!"
-- ✅ "I've updated the config. The four call sites in `api/` still pass the old flag — want me to update those too?"
+- ✅ "I've updated the config and the four call sites in `api/` that still passed the old flag." (the next step, done)
+- ✅ "I've updated the config. The four call sites in `api/` still pass the old flag; I've left them because changing them breaks v1 clients, so the cutover date is your call." (the reason it isn't done)
 
-**Exception — gated keep:** A real next step is not this tic, but state it rather than ask it. "Next I'll wire up the test for it" proposes something real and keeps the work; "Want me to wire up the test for it?" hands back a decision you could have made. Once the opener and the sign-off are gone, the question-shaped offer is where the tic survives — it reads as courtesy and functions as a handoff. The other tell is the generic sign-off that fits any turn without modification.
+**Exception — gated keep:** A real next step is not this tic, and it has two correct forms: do it in this turn, or say why you aren't (what it waits on, or which decision is the reader's). Two closing forms are the tic. The offer ("Want me to wire up the test for it?") hands back work you could have done. The closing promise ("Next I'll wire up the test for it") ends the turn on work that won't happen until the reader replies, while reading as though the reader need do nothing. Announcing "Next I'll wire up the test" and then wiring it up in the same turn is fine; ending the turn on the announcement is the tic. Once the opener and the sign-off are gone, the offer and the promise are where the tic survives, because each reads as courtesy or momentum and functions as a handoff.
 
 ---
 
@@ -89,8 +90,8 @@ Cross-reference: this is the chat form of Write Better's C2 (Name the thing, not
 - ✂️ "As I mentioned above, the retry logic handles that."
 - ✅ "The client retries a 502 twice before it fails, so that timeout clears itself."
 
-- ✂️ "Per ADR-0030, I'll add the status label."
-- ✅ "I'll mark the URL in-review, since a bare URL has read as ready-to-merge before and got one merged early."
+- ✂️ "Per ADR-0030, I've added the status label."
+- ✅ "I've marked the URL in-review, since a bare URL has read as ready-to-merge before and got one merged early."
 
 - ✂️ "The bug is at `handlers.py:214`."
 - ✅ "The handler catches the write error and returns 200 anyway (`handlers.py:214`), so a failed save looks like a success."
@@ -203,7 +204,7 @@ Cross-reference: Write Better has no rule for artifact-level over-structuring; t
 For each turn, ask three questions:
 
 1. Does the first line answer, or perform?
-2. Does the last line add a real next step, or sign off out of reflex?
+2. If a next step remains, is it done, or is the reason it isn't given?
 3. Can the reader act on the turn without opening anything?
 
 If any fails, fix it: cut the frame, or name the thing the handle points to. A clean turn comes out shorter and lands on the substance faster.
@@ -214,13 +215,13 @@ This is the check the adversarial review pass runs, one turn at a time.
 
 ## On command: talk-better
 
-In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) to run a focused pass that conforms a reply or conversation to this guide and changes nothing else. On Claude.ai or Cowork, say **"run talk-better on this"**. Run it in three stages:
+In Claude Code, type **`/talk-better`** (optionally with a transcript or draft) to run a focused pass that conforms a reply or conversation to this guide and changes nothing else. On Claude.ai or Cowork, say **"run talk-better on this"**. Run it in three stages, kept distinct because a single combined read leaks tics:
 
 1. **Fix** each tic in the catalog above wherever it appears.
 2. **Review as an adversary.** Re-read the fixed text as a critic who assumes at least one tic survived and means to catch it. Go tic by tic through the catalog, then run the three-question test from [The test](#the-test) above. For each check, quote a still-violating line, or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
 3. **Rewrite** from the review, fixing or cutting every line it flagged.
 
-Throughout, keep the gated exceptions (a real next step stated as intent rather than asked, a concession of a real error with the reason, proportionate acknowledgment of real distress); change nothing else, leaving substance, facts, numbers, steps, and code untouched; and report what changed as a short list, naming the tic each edit served.
+Throughout, keep the gated exceptions (a next step either done or given with the reason it isn't, a concession of a real error with the reason, proportionate acknowledgment of real distress); change nothing else, leaving substance, facts, numbers, steps, and code untouched; and report what changed as a short list, naming the tic each edit served.
 
 In Claude Code, dispatch stage 2 to a separate reviewer subagent for a stronger pass. Expect a cleaned reply to come out shorter and land faster.
 

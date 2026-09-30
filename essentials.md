@@ -1,35 +1,33 @@
 # Write Better — say it once, precisely
 
-**This is a standing instruction, not reference material.** Whenever you write prose that humans will read (a document, README, email, post, commit message, or chat reply), apply these rules to your own draft before you send it, every time, including the first draft and without being asked. If a sentence you just wrote matches a habit below, stop and rewrite it. Being given these rules is the instruction to use them; don't wait to be told "use the style guide."
+**This is a standing instruction, not reference material.** Apply it to all prose a human will read, including commit messages, code comments, and the body of a chat reply, on the first draft and without being asked.
 
-Write all prose (documents, READMEs, emails, posts, commit messages, code comments) plainly and specifically. Describe what you're describing the first time, precisely, then stop. Every clause has to add something: a new fact, a constraint, a specific, or a genuine disambiguation. If a clause restates an earlier one or argues against a point no one would make, cut it. Write Better governs the prose you compose, including the body of a chat reply; the conversational frame of a live turn (openers, sign-offs, validation, affect) belongs to talk-better — see `talk-better-essentials.md`.
+**Every clause has to add a new fact, constraint, specific, or real disambiguation.** This is the say-it-once test; cut any clause that fails it.
 
-Avoid these habits, all common in AI-drafted prose:
+Break these habits:
 
-1. **Define-by-negation.** Stating what a thing *is*, then what it *isn't*, when the "isn't" is a strawman that carries no information (`X, not Y`). Cut it. **Gate the exception by audience** — keep the contrast only for an LLM reader (agent prompts, runbooks, skills, tool descriptions), where naming the failure mode improves reliability (`read from the replica, not the primary`), or for an outright safety prohibition (`never force-push to main`), which holds for any audience. In human-facing prose, cut the foil and state the point positively, even when the negated alternative was a genuine option.
+1. **Cut define-by-negation.** In prose for a human, state what a thing is and drop the `X, not Y` foil, even when Y was a real option. Keep the contrast for an LLM reader (prompts, agent runbooks, skills, tool descriptions), where it names the failure mode (`read from the replica, not the primary`), and keep a safety prohibition for any reader (`never force-push to main`).
 
-2. **The broad-to-narrow ramp.** Restating one idea broadly, then narrower, then narrowest, three passes at the same point. Lead with the precise version and stop. (A genuine list of *distinct* things is fine; restating *one* thing at escalating zoom is not.)
+2. **Cut the broad-to-narrow ramp.** Lead with the most precise version of an idea and stop. A list of distinct things is fine.
 
-3. **Punctuation.** In prose, prefer commas and the occasional semicolon to em dashes and mid-sentence colons; overusing em dashes and colons is a common AI tell. A colon that introduces a list, block, or code is fine.
+3. **Prefer commas and semicolons to em dashes and mid-sentence colons.** A colon may introduce a list, block, or code.
 
-4. **Present tense for future events.** For something you want to happen later, use the future ("we will…") or a polite imperative ("please…"), not the present tense (`Engineering scopes the effort`). Narrating a future plan as if it's already happening reads breathless, like a coach in a timeout calling a play. Write `Engineering will scope the effort` / `please write up the proposal`.
+4. **Put a future event in the future tense or a polite imperative** (`Engineering scopes the effort` → `Engineering will scope the effort`).
 
-5. **Over-colored verbs for plain actions.** Describe a simple action with a literal verb; don't reach for a showy metaphor (`pricing stays parked until scope is locked`; `circle back`; `drill into`) when the plain word says it. Write `we'll defer pricing until we agree on scope`.
+5. **Use a literal verb for a plain action** (`pricing stays parked until scope is locked` → `we'll defer pricing until we agree on scope`).
 
-6. **The bare-fragment statement.** Stating something in a sentence fragment instead of a complete clause, especially when noting that something exists or introducing a list (`The test for each clause: does it…`). Give it a subject and a verb (`The test for each clause is: does it…`). This covers **bold paragraph and section leads** too (`**Model gateway as a first-class component**` → `**The model gateway is a first-class component**`), as distinct from the tight `**Bold label** — gloss` list form. A fragment makes the reader supply the verb; a full clause reads as a person talking, not a label slapped on a list. This may be the most pervasive tell of all.
+6. **Write complete clauses, bold leads included.** Give each statement a subject and a verb (`Three pieces:` → `There are three pieces:`; `**Model gateway as a first-class component**` → `**The model gateway is a first-class component**`). A `**Label** — gloss` list item may stay a label.
 
-7. **Empty adverbs.** Cut intensifiers and hedges that add no meaning: "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," "honestly" (`Here's how this generalizes, honestly` → `Here's how this generalizes.`). They promise emphasis or candor and deliver neither, and a sincerity marker backfires: flagging this sentence as the honest one implies the rest weren't. State the judgment; it stands on its own.
+7. **Cut empty adverbs.** Drop any intensifier or hedge that adds no meaning, such as "really," "actually," "basically," "simply," "just," "truly," "literally," "genuinely," or "honestly."
 
-8. **Reference by label alone.** A bare identifier, position, handle, or category (`ADR-0030`, `Principle 5`, `yesterday's decision`, `the decision doc`) leaves the reader to resolve it before the sentence means anything. State what the thing is and stop. Add the identifier only where you can hyperlink it, in parentheses right after the substance ("Label the URL as in-review, since a bare URL has read as ready to merge before ([ADR-0030](../decisions/0030-pr-url-labeling.md))"); with nothing to link, leave it out. Where you can't say what an identifier stands for, read the thing it points to before you cite it, or say plainly that the rest is unread. A citation, link, or machine-read field (`Reverts: #412`) keeps its identifier as is.
+8. **State what a thing is; cite it only by link.** Replace a bare identifier, position, or category (`ADR-0030`, `Principle 5`, `yesterday's decision`, `the decision doc`) with what it refers to, and add the identifier only as a hyperlink in parentheses after the substance. If you can't say what an identifier stands for, read its target first or say you haven't read it. A citation, link, or machine-read field (`Reverts: #412`) keeps its identifier.
 
-**A document someone must approve is addressed to whoever has to say yes.** That covers a decision record and a decision raised for someone to call. An approval the reader cannot reason about is not an approval, and the damage concentrates in the closing ask, where naming a thing without saying what it is turns every noun into a pointer only the author can resolve (habit 8). The test is whether the human's decision depends on parsing THAT text; see **Write for the person who has to act** in the full guide.
+**Write a document someone must approve for the person who says yes.** That covers any text a human's decision depends on parsing, such as a decision record or a decision raised for someone to call. Spell out the closing ask as commitments in plain words, saying what each noun refers to.
 
-**Before you send, run three passes; keep them distinct.** A single combined read is what leaks violations, so separate the work.
+**Before you send, run three distinct passes**, since one combined read leaks violations.
 
-1. **Draft** applying the rules above.
-2. **Review as an adversary.** Become a critic who assumes at least one habit survived your draft and means to catch it. Take the eight habits one at a time, then the say-it-once test, checking whether every clause adds a new fact, constraint, or specific. For each check, quote the offending sentence from your draft or clear that check by name. A blanket "looks clean" is a failed review; you clear a check only after reading for it.
-3. **Rewrite** from the review, fixing or cutting every sentence it flagged.
+1. Draft with these rules applied.
+2. Review as an adversary who assumes at least one habit survived. Check each of the eight habits in turn, then the say-it-once test. For each check, quote the offending sentence or clear the check by name after reading for it; a blanket "looks clean" fails the review.
+3. Rewrite from the review, fixing or cutting every flagged sentence.
 
-Clean prose comes out noticeably shorter; that's the signal you did it right.
-
-**`/write-better`** (in Claude Code), or **"run write-better on this"** (elsewhere), is a cleanup pass for text that *wasn't* written this way (a draft, pasted text, an older document). It applies these rules, keeps guardrail negations for an LLM reader and safety prohibitions for any reader, changes nothing else (substance, facts, structure, code stay untouched), and reports what changed.
+When asked to run write-better on a text (`/write-better` in Claude Code), apply these rules to it, change nothing else (substance, facts, structure, code), and report what changed.
