@@ -285,7 +285,7 @@ Copy this template, fill it in, and slot it under the right category (give it th
   happen until the reader replies while reading as though the reader need do nothing. Announcing
   a step and doing it in the same turn is still fine. The change landed in the essentials (item 2
   and the review question), T2's examples and exception, the test, the On-command exceptions, the
-  `/talk-better` command, and the skill.
+  `/talk-better` command, and the skill. talk-better-essentials.md grew from 2,731 to 2,874 bytes.
 - **2026-09-29 — Both essentials cut to about half.** essentials.md went from 6,459 to 3,228
   bytes and talk-better-essentials.md from 5,017 to 2,731, because both load into the always-on
   context of every session and are re-read on every model call. Every bold lead is now a
